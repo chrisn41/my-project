@@ -26,9 +26,11 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <!-- Menambahkan classifier untuk menghindari konflik -->
+          <classifier>jar</classifier>
+        </configuration>
       </plugin>
     </plugins>
   </build>
 </project>
-
-  
