@@ -8,20 +8,26 @@
   <artifactId>my-project</artifactId>
   <version>1.0-SNAPSHOT</version>
 
+  <!-- Tambahkan bagian ini -->
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
   <build>
-      <plugins>
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-jar-plugin</artifactId>
-              <version>3.1.0</version>
-              <configuration>
-                  <archive>
-                      <manifest>
-                          <mainClass>com.chrisn41.Main</mainClass>
-                      </manifest>
-                  </archive>
-              </configuration>
-          </plugin>
-      </plugins>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.chrisn41.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
