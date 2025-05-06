@@ -15,7 +15,7 @@
 
   <build>
     <plugins>
-      <!-- Tambahkan ini -->
+      <!-- Plugin compiler versi baru -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -26,11 +26,11 @@
         </configuration>
       </plugin>
 
-      <!-- Sudah Anda punya -->
+      <!-- Optional: Plugin jar untuk menghasilkan file JAR -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.3.0</version>
         <configuration>
           <archive>
             <manifest>
