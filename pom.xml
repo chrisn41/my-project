@@ -1,35 +1,18 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<properties>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+</properties>
 
-  <groupId>com.chrisn41</groupId>
-  <artifactId>my-project</artifactId>
-  <version>1.0-SNAPSHOT</version>
-
-  <properties>
-    <!-- Tentukan encoding agar tidak tergantung platform -->
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <!-- Ini juga bisa digunakan untuk kompatibilitas dengan Java 11 modular -->
-    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-  </properties>
-
-  <build>
+<build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
-        <configuration>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
-          <!-- Menambahkan konfigurasi untuk Java 11 modular, jika diperlukan -->
-          <compilerArgument>--module-path ${module.path}</compilerArgument>
-        </configuration>
-      </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+                <source>${maven.compiler.source}</source>
+                <target>${maven.compiler.target}</target>
+            </configuration>
+        </plugin>
     </plugins>
-  </build>
-</project>
+</build>
