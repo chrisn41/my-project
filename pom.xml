@@ -9,8 +9,12 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
+    <!-- Tentukan encoding agar tidak tergantung platform -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
+    <!-- Ini juga bisa digunakan untuk kompatibilitas dengan Java 11 modular -->
+    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
   </properties>
 
   <build>
@@ -22,6 +26,8 @@
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
+          <!-- Menambahkan konfigurasi untuk Java 11 modular, jika diperlukan -->
+          <compilerArgument>--module-path ${module.path}</compilerArgument>
         </configuration>
       </plugin>
     </plugins>
