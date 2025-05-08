@@ -1,9 +1,9 @@
-FROM openjdk:17-jdk-slim
+FROM maven:3.9.6-eclipse-temurin-17
 
 WORKDIR /app
 
 COPY . .
 
-RUN ./mvnw clean package
+RUN mvn clean package
 
-CMD ["java", "-jar", "target/your-app.jar"]
+CMD ["java", "-jar", "target/my-project-1.0-SNAPSHOT.jar"]
