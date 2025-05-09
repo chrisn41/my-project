@@ -16,10 +16,10 @@ pipeline {
             steps {
                 script {
                     echo "Building the Docker image..."
-                    withCredentials([usernamePassword(credentialsId: 'docker-hub-credential', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-                        sh 'docker build -t summer41/demo-app-jma:2.0 .'
-                        sh "echo $PASS | docker login -u $USER --password-stdin"
-                        sh 'docker push summer41/demo-app-jma:2.0'
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-credential', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                        sh 'docker build -t summer41/demo-app:jma-2.0 .'
+                        sh "echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin"
+                        sh 'docker push summer41/demo-app:jma-2.0'
                     }
                 }
             }
